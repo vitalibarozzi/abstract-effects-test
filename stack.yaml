@@ -1,0 +1,8 @@
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/20/10.yaml
+packages:
+- .
+extra-deps:
+ - git: https://github.com/vitalibarozzi/effects
+   commit: ce60be0ddd8642b1a365da6c523b2895a815141d
+system-ghc: true

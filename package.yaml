@@ -1,0 +1,26 @@
+name:                effects-test
+version:             0.1.0.0
+github:              "vitalibarozzi/effects-test"
+license:             MIT
+author:              "Joao Vitor Vitali Barozzi"
+maintainer:          "vitalivitor@gmail.com"
+copyright:           "2023 Joao Vitor Vitali Barozzi"
+
+dependencies:
+- base >= 4.7 && < 5
+- text
+- effects
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wno-redundant-constraints
+
+library:
+  source-dirs: src

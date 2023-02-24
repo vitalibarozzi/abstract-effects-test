@@ -1,0 +1,34 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           effects-test
+version:        0.1.0.0
+homepage:       https://github.com/vitalibarozzi/effects-test#readme
+bug-reports:    https://github.com/vitalibarozzi/effects-test/issues
+author:         Joao Vitor Vitali Barozzi
+maintainer:     vitalivitor@gmail.com
+copyright:      2023 Joao Vitor Vitali Barozzi
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/vitalibarozzi/effects-test
+
+library
+  exposed-modules:
+      Control.Monad.Effect.State.Test
+      Control.Monad.Effect.Test.Helpers
+  other-modules:
+      Paths_effects_test
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wno-redundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , effects
+    , text
+  default-language: Haskell2010
