@@ -4,5 +4,5 @@ packages:
 - .
 extra-deps:
  - git: https://github.com/vitalibarozzi/effects
-   commit: ce60be0ddd8642b1a365da6c523b2895a815141d
+   commit: c812d7c4fb605d15c15a0e003877fe462db2b03f
 system-ghc: true

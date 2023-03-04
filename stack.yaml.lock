@@ -5,15 +5,15 @@
 
 packages:
 - completed:
-    commit: ce60be0ddd8642b1a365da6c523b2895a815141d
+    commit: c812d7c4fb605d15c15a0e003877fe462db2b03f
     git: https://github.com/vitalibarozzi/effects
     name: effects
     pantry-tree:
-      sha256: 3a6ad75f9d40b8e396f4483e69c00ea90b4921b209c5f628d5d438ad80bbf4cd
-      size: 993
+      sha256: 749245ef0f33932f02d57b9efd2cf0a0f468e721aa02d76cc0b522b72de01875
+      size: 997
     version: 0.1.0.0
   original:
-    commit: ce60be0ddd8642b1a365da6c523b2895a815141d
+    commit: c812d7c4fb605d15c15a0e003877fe462db2b03f
     git: https://github.com/vitalibarozzi/effects
 snapshots:
 - completed:

@@ -20,8 +20,11 @@ source-repository head
 
 library
   exposed-modules:
-      Control.Monad.Effect.State.Test
       Control.Monad.Effect.Test.Helpers
+      Control.Monad.Effect.Test.Random
+      Control.Monad.Effect.Test.State
+      Control.Monad.Effect.Test.StateException
+      Control.Monad.Effect.Test.StatePartial
   other-modules:
       Paths_effects_test
   hs-source-dirs:
