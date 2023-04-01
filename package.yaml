@@ -1,6 +1,6 @@
-name:                effects-test
+name:                abstract-effects-test
 version:             0.1.0.0
-github:              "vitalibarozzi/effects-test"
+github:              "vitalibarozzi/abstract-effects-test"
 license:             MIT
 author:              "Joao Vitor Vitali Barozzi"
 maintainer:          "vitalivitor@gmail.com"
@@ -9,7 +9,7 @@ copyright:           "2023 Joao Vitor Vitali Barozzi"
 dependencies:
 - base >= 4.7 && < 5
 - text
-- effects
+- abstract-effects
 
 ghc-options:
 - -Wall

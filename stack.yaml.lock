@@ -5,16 +5,16 @@
 
 packages:
 - completed:
-    commit: c812d7c4fb605d15c15a0e003877fe462db2b03f
-    git: https://github.com/vitalibarozzi/effects
-    name: effects
+    commit: 135de5f23b20ef480c16feed3b2dab562ac5fedd
+    git: https://github.com/vitalibarozzi/abstract-effects
+    name: abstract-effects
     pantry-tree:
-      sha256: 749245ef0f33932f02d57b9efd2cf0a0f468e721aa02d76cc0b522b72de01875
-      size: 997
-    version: 0.1.0.0
+      sha256: 9063309ef9d5de253ea6ad986e5ad1e2f21b7517831280c5cb3beb5a08fe206b
+      size: 1146
+    version: 0.1.0.1
   original:
-    commit: c812d7c4fb605d15c15a0e003877fe462db2b03f
-    git: https://github.com/vitalibarozzi/effects
+    commit: 135de5f23b20ef480c16feed3b2dab562ac5fedd
+    git: https://github.com/vitalibarozzi/abstract-effects
 snapshots:
 - completed:
     sha256: 17870c63f8041ac17a38096124abeb953cb14d84bfc96deb88f9b24daa97b347

@@ -20,6 +20,8 @@ simple
     -> s         -- ^ Expected value after operation has been applied to the state.
     -> m Result
 simple operate s0 s1 = do
+    undefined
+    {-
     _  <- put s0
     g0 <- get
     _  <- modify operate
@@ -29,11 +31,14 @@ simple operate s0 s1 = do
         (False, True) -> failure "(get . put) failed."
         (True, False) -> failure "(get . modify) failed."
         (False, False) -> failure "both (get . modify) and (get . put) have failed."
+-}
 
 
 
 recursiveCount :: (Monad m, State Integer m) => Integer -> m Result
 recursiveCount top = do
+    undefined
+{-
     put (0 :: Integer)
     let go = do
           n <- get
@@ -43,3 +48,4 @@ recursiveCount top = do
                   put (n + 1)
                   go
     go
+-}

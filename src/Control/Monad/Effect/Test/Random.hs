@@ -15,7 +15,7 @@ import Control.Monad.Effect.Test.Helpers
 
 nonRepeating :: forall a m proxy. (Eq a, Monad m, Random a m) => proxy a -> m Result
 nonRepeating _ = do
-    (a0, a1) <- roll
+    (a0, a1) <- undefined -- roll
     if a0 /= (a1 :: a) 
         then success 
         else failure "the generated values are the same"
@@ -31,7 +31,7 @@ sparseRepeating factor _ = do
         if n <= 0
             then failure "too many repeating values"
             else do
-                (a0, a1) <- roll
+                (a0, a1) <- undefined -- roll
                 if a0 /= (a1 :: a)
                     then success 
                     else go (n-1)

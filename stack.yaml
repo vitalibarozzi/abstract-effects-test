@@ -4,5 +4,5 @@ packages:
 - .
 extra-deps:
  - git: https://github.com/vitalibarozzi/abstract-effects
-   commit: 461d9c2edbeb553d756ca0c456b7ecf3581a0275
+   commit: 135de5f23b20ef480c16feed3b2dab562ac5fedd
 system-ghc: true

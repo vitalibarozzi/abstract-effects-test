@@ -1,9 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleContexts #-}
 module Control.Monad.Effect.Test.StatePartial
-    ( simple
-    , recursiveCount
-    )
 where
 
 
