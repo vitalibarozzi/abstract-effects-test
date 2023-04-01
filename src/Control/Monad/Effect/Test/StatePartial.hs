@@ -1,37 +1,52 @@
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE AllowAmbiguousTypes #-}
+{-# LANGUAGE BlockArguments #-}
 {-# LANGUAGE FlexibleContexts #-}
 module Control.Monad.Effect.Test.StatePartial
 where
 
 
 import Prelude hiding (all)
-import Control.Monad.Effects (State(..), Partial(..))
-import Control.Monad.Effect.Test.Helpers
+import Control.Monad.Effects (State(..), modify, nil, Partial(..), catches, Recover(..), Void)
+import Control.Monad.Effect.Test.Internal
 
 
-
-{-
--- | This functions tests how does state and partial interact,
--- the two typical behaviours been "state updates are discarded in
--- case of a failure" or "the state updates are not discarded in case
--- of failure". This function does not test for one of the other specifically,
--- that is decided by the catcher function and the expected value at the end.
--- Since the way a monad will catch exception is decided by this monad itself
--- we need to receive the catcher function as arguments to make use of it in the
--- test.
-stateUpdateBehaviour
-    :: (Monad m, State s m, Partial m)
-    => (s -> s) -- ^ Operation function that changes the state.
-    -> s        -- ^ The initial state.
-    -> s        -- ^ The expected state at the end.
-    -> (m x -> m x -> m x) -- | The catcher function we use to wrap the partial.
-    -> m Result 
-stateUpdateBehaviour operate s0 s1 catchWith = do
-    put s0
-    -- TODO on the other hand this looks very strange
-    catchWith handleErr (modify operate >> nil)
-    g1 <- get
-    if g1 == s1
+nonTransitional 
+    :: ( State Integer m
+       , Partial m
+       , Recover m
+       )
+    => m Result
+nonTransitional = do
+    put (256 :: Integer)
+    catches handleErr do
+        s <- get
+        put (s + 256)
+        nil
+    s <- get
+    if s == 512
         then success
         else failure ""
--}
+  where
+    handleErr = const (return ())
+
+
+transitional 
+    :: ( State Integer m
+       , Partial m
+       , Recover m
+       )
+    => m Result
+transitional = do
+    put (256 :: Integer)
+    catches handleErr do
+        s <- get
+        put (s + 256)
+        nil
+    s <- get
+    if s == 256
+        then success
+        else failure ""
+  where
+    handleErr = const (return ())

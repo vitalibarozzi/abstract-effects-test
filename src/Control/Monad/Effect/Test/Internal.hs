@@ -1,9 +1,4 @@
-module Control.Monad.Effect.Test.Helpers
-    ( Result
-    , success
-    , failure
-    )
-where
+module Control.Monad.Effect.Test.Internal where
 
 
 import Data.Text (Text)
