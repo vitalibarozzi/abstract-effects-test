@@ -3,6 +3,6 @@ resolver:
 packages:
 - .
 extra-deps:
- - git: https://github.com/vitalibarozzi/effects
-   commit: c812d7c4fb605d15c15a0e003877fe462db2b03f
+ - git: https://github.com/vitalibarozzi/abstract-effects
+   commit: 461d9c2edbeb553d756ca0c456b7ecf3581a0275
 system-ghc: true
